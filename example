@@ -1,5 +1,4 @@
 import  sqlite3
-import  time
 class Kisi():
 
     def __init__(self,isim,soyisim,departman,maas,adres,no):
@@ -124,8 +123,7 @@ while True:
         
     elif islem=="2":
         no =input("Sorgulamak istediğiniz kişinin No'sunu girin :")
-        print("Kişi sorgulanıyor ...")
-        time.sleep(2)
+     
         kisim.kisi_sorgula(no)
     elif islem=="3":
 
@@ -137,14 +135,10 @@ while True:
         no =int(input("Silmek istediğiniz kişinin No' sunu girin :"))
         tekrar =input("Kişiyi silmek istediğinizden emin misiniz(E/H):")
         if tekrar=="E":
-            print("Kişi Siliniyor...")
-            time.sleep(2)
             print("kişi Sistemden Silindi")
             kisim.kisi_sil()
     elif islem=="5":
         no =int(input("Maaş zam yapmak istediğiniz kişinin No' sunu girin :"))
-        print("Zam yapılıyor...")
-        time.sleep(2)
         print("Zam yapıldı.")
         kisi.maas_zam()
 
